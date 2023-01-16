@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+     "-//Puppy Crawl//DTD Suppressions 1.0//EN"
+     "http://www.puppycrawl.com/dtds/suppressions_1_0.dtd">
+
+<suppressions>
+    <suppress files=".java" checks="javadoc" />
+    <suppress checks="LineLength"
+                 files="ExtentReporterNG.java"
+                 lines="29"/>
+     <suppress checks="LineLength"
+                 files="AnnotationTransformer.java"
+                 lines="10"/>
+     <suppress checks="LineLength"
+                 files="ApiClient.java"
+                 lines="88,113"/>
+     <suppress checks="LineLength"
+                 files="TestBmoTilePageSearchShouldProduceCorrectResultsWhenEnteringBmoTitleClientNameInSearchBar.java"
+                 lines="14,19"/>
+     <suppress checks="LineLength"
+                 files="TestBmoTilePageSearchShouldProduceCorrectResultsWhenEnteringBmoTitleFileNameInSearchBar.java"
+                 lines="18"/>
+     <suppress checks="LineLength"
+                 files="TestBmoTilePageSearchShouldProduceCorrectResultsWhenFilteringByLabels.java"
+                 lines="14,18"/>
+     <suppress checks="LineLength"
+                 files="TestBmoTilePageSearchShouldProduceCorrectResultsWhenFilteringByMediaType.java"
+                 lines="14,18"/>    
+     <suppress checks="LineLength"
+                 files="TestBmoTilePageSearchShouldProduceCorrectResultsWhenFilteringByStatus.java"
+                 lines="14,18"/>
+     <suppress checks="LineLength"
+                 files="TestClientsShouldNotBeAbleToCreateANewClientIfRequiredFieldsAreMissing.java"
+                 lines="11"/>         
+     <suppress checks="VariableDeclarationUsageDistance"
+                 files=".java"/>
+     <suppress checks="LineLength"
+                 files="TestRecentlyUploadedShouldDisplayAllBmosCreatedByThisTenantInTheLastTwoWeeksWithTheCorrectFieldValues.java"
+                 lines="20"/>
+     <suppress checks="LineLength"
+                 files="TestRecentlyUploadedShouldDisplayThumbnailsSizedAndPositionedCorrectly.java"
+                 lines="13"/>
+     <suppress checks="LineLength"
+                 files="TestRecentlyUploadedShouldTakeAUserToTheBmoDetailPageForTheRelevantBmoWhenClickedInRecentlyUploadedComponent.java"
+                 lines="12,17"/>
+     <suppress checks="LineLength"
+                 files="TestProjectsShouldNotBeAbleToCreateANewProjectIfRequiredFieldsAreMissing.java"
+                 lines="11"/>
+     <suppress checks="LineLength"
+                 files="TestRecentlyUploadedShouldDisplayAllBmosCreatedByThisTenantInTheLastTwoWeeksWithTheCorrectFieldValues.java"
+                 lines="16"/>
+     <suppress checks="LineLength"
+                 files=".java"
+                 lines="0-20"/>
+</suppressions>
