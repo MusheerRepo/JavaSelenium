@@ -1,0 +1,8 @@
+steps:
+  - id: "build-and-deply-the-image"
+    name: "gcr.io/kaniko-project/executor:latest"
+    args:
+    - --destination=us-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$REPO_NAME:latest
+    - --cache=true
+    - --cache-ttl=72h
+    - --context=dir://BrandTechUIAuto

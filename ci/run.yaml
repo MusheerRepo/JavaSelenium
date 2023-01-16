@@ -1,0 +1,58 @@
+steps:
+  - id: "execute-tests"
+    name: us-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$REPO_NAME
+    timeout: 2400s
+    volumes:
+      - name: "output_volume"
+        path: "/app/test-output"
+      - name: "result_volume"
+        path: "/result/"
+    env:
+      - "URL=$_URL"
+      - "USER=$_USER"
+      - "PASSWORD=$_PASSWORD"
+      - "XML_SUITE=$_XML_SUITE"
+      - "PAYLOAD=$_PAYLOAD"
+    secretEnv: [ "TESTRAIL_CONFIG" ]
+  - id: "copy-test-report-to-storage"
+    name: gcr.io/cloud-builders/gsutil
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        /builder/google-cloud-sdk/bin/gsutil cp -r /output/** gs://bt-ui-automation-reports/$BUILD_ID/
+    volumes:
+      - name: "output_volume"
+        path: "/output/"
+  - id: "copy-test-report-to-vm"
+    name: gcr.io/cloud-builders/gcloud
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        for i in $(gcloud compute os-login ssh-keys list --format="table[no-heading](value.fingerprint)"); do 
+          echo $i; 
+          gcloud compute os-login ssh-keys remove --key $i || true; 
+        done
+        chmod -R 777 /output
+        /builder/google-cloud-sdk/bin/gcloud compute ssh --verbosity="debug" bt-test-results --zone=us-central1-a --command="mkdir /var/static/$BUILD_ID/" && \
+        /builder/google-cloud-sdk/bin/gcloud compute scp --verbosity="debug" --recurse --force-key-file-overwrite --zone=us-central1-a /output/** bt-test-results:/var/static/$BUILD_ID/
+    volumes:
+      - name: "output_volume"
+        path: "/output/"
+  - id: "exit-step"
+    name: "bash"
+    args:
+      - "-c"
+      - |
+        exit $(cat /result/result)
+    volumes:
+      - name: "result_volume"
+        path: "/result/"
+timeout: 2400s
+options:
+  machineType: "N1_HIGHCPU_32"
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/testrail-config-secret/versions/latest
+      env: TESTRAIL_CONFIG

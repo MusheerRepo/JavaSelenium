@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  automation:
+    build:
+      context: ./BrandTechUIAuto
+      dockerfile: Dockerfile
+    environment:
+      - URL=https://dev-ui.brandtech.io/
+      - XML_SUITE=Regression.xml
+      - USER="mfsi.musheerk@gmail.com"
+      - PASSWORD="brandtechtest123!"
