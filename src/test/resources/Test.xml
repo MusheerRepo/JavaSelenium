@@ -2,6 +2,11 @@
 <suite name="My Test Suite" verbose="10" useDefaultListeners="true">
   <test thread-count="10" name="My Test" parallel="methods">
     <!--To run all the test cases inside e2e folder -->
+    <listeners>
+      <listener class-name="util.ExtentReporter"></listener>
+      <listener class-name="util.CustomListener"></listener>
+    </listeners>
+    <parameter name="browser" value="Chrome"></parameter>
     <packages>
 			<package name="e2e.*"/>
 		</packages>

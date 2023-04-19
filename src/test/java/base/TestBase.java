@@ -31,12 +31,11 @@ public class TestBase {
          * it is important to keep WebDriver instance headless in that case
          */
 
-        /*
-         * //Setup code for chrome
-         * ChromeOptions chromeOptions = new ChromeOptions();
-         * chromeOptions.addArguments("--headless");
-         * driver.set(new ChromeDriver(chromeOptions));
-         */
+         //Setup code for chrome
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        driver.set(new ChromeDriver(chromeOptions));
+
     
         /*
          * //Setup code for firefox
