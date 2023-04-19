@@ -6,18 +6,18 @@ The suite comes pre-built with configuration of test and customized testrunner f
 
 ## 🛠️ Technologies Used
 
-- Java 17.0.6
+- Java
 - Selenium
 - TestNG
 - Maven
-- Extent Reports
-- Log4j
+- ExtentReports
+- Log4j2
 
 ## 📦 Installation
 
 [Check installation process](docs/Installation.md)
 
-## 🚧 Local usage
+## 💻 Local usage
 Clone the repository to your local machine:
 ```
 git clone https://github.com/MusheerRepo/JavaSelenium.git
