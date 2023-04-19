@@ -1,8 +1,8 @@
 # 🚀 Automated Testing Suite with Java, Selenium
 
-The "Automated Testing Suite with Java, Selenium, TestNG, and Maven" project is a comprehensive test suite designed to automate functional, regression testing.
+This project is a comprehensive test suite designed to automate functional, regression testing.
 
-The suite comes pre-built with a suite of automated tests covering a wide range of scenarios, including login authentication, form submissions, and user actions. The project also includes a set of utilities for logging, error reporting, and test result generation.
+The suite comes pre-built with configuration of test and customized testrunner file. The project also includes a set of utilities for logging, error reporting, and test result generation.
 
 ## 🛠️ Technologies Used
 
@@ -23,12 +23,12 @@ Clone the repository to your local machine:
 git clone https://github.com/MusheerRepo/JavaSelenium.git
 ```
 
-2. Navigate to the project directory:
+Navigate to the project directory:
 ```
 cd JavaSelenium
 ```
 
-3. Download dependencies:
+Download dependencies:
 ```
 mvn clean install -Dmaven.test.skip=true
 ```
@@ -44,3 +44,9 @@ mvn test
 ```
 open test-output/Extent_Report/Extent.html
 ```
+
+## 📫 Connect
+<p align="left">
+<a href="https://twitter.com/Musheer_AKhan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="treciaks" height="30" width="40" /></a>
+<a href="https://in.linkedin.com/in/musheer-ahmad-khan-579953113" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="treciaks" height="30" width="40" /></a>
+</p>
