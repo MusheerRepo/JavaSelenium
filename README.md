@@ -6,7 +6,7 @@ The suite comes pre-built with a suite of automated tests covering a wide range 
 
 ## 🛠️ Technologies Used
 
-- Java
+- Java 17.0.6
 - Selenium
 - TestNG
 - Maven
@@ -19,7 +19,28 @@ Install Homebrew
 ```
 Install java
 ```
-brew install openjdk
+https://www.oracle.com/java/technologies/downloads/
+```
+
+Uninstall java
+```
+sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
+sudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefPane
+sudo rm -fr ~/Library/Application\ Support/Java
+sudo rm -fr /Library/Java/JavaVirtualMachines/*
+```
+
+How to know version of JDK and JRE
+```
+/usr/libexec/java_home -V //JDK
+java -version //jre
+```
+
+Set java path
+```
+/usr/libexec/java_home  //To check the current path
+nano ~/.zshrc //To add path
+source ~/.zshrc //Load update source file
 ```
 
 Install maven
@@ -50,7 +71,9 @@ mvn test
 ```
 
 ## 📄 Reports
-
+```
+open test-output/Extent_Report/Extent.html
+```
 
 ## 📬 Contact
 

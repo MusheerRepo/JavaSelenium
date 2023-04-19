@@ -1,0 +1,36 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="My Test Suite" verbose="10" useDefaultListeners="true">
+  <test name="My Test" parallel="methods">
+    <!--To run all the test cases inside e2e folder -->
+    <packages>
+			<package name="e2e.*"/>
+		</packages>
+
+    <!-- To run specific group "Scenario 1" inside e2e folder
+    <groups>
+            <run>   
+                 <include name="Scenario 1"/>
+            </run>  
+    </groups>
+    <packages>
+        <package name="e2e.*"/>
+    </packages>
+    -->
+    
+    <!-- To run test cases of specific class "Test2.java"
+    <classes>
+      <class name="e2e.scenario2.Test2"/>
+    </classes>
+    -->
+    
+    <!-- To run specific test case "test1" of specific class "Test1.java"
+    <classes>
+      <class name="e2e.scenario1.Test1">
+        <methods>
+          <include name="test1"/>
+        </methods>
+      </class>
+    </classes>
+    -->
+  </test>
+</suite>
