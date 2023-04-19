@@ -10,47 +10,17 @@ The suite comes pre-built with a suite of automated tests covering a wide range 
 - Selenium
 - TestNG
 - Maven
+- Extent Reports
+- Log4j
 
 ## 📦 Installation
 
-Install Homebrew
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-Install java
-```
-https://www.oracle.com/java/technologies/downloads/
-```
+[Check installation process](docs/Installation.md)
 
-Uninstall java
+## 🚧 Local usage
+Clone the repository to your local machine:
 ```
-sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
-sudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefPane
-sudo rm -fr ~/Library/Application\ Support/Java
-sudo rm -fr /Library/Java/JavaVirtualMachines/*
-```
-
-How to know version of JDK and JRE
-```
-/usr/libexec/java_home -V //JDK
-java -version //jre
-```
-
-Set java path
-```
-/usr/libexec/java_home  //To check the current path
-nano ~/.zshrc //To add path
-source ~/.zshrc //Load update source file
-```
-
-Install maven
-```
-brew install maven
-```
-
-1. Clone the repository to your local machine:
-```
-https://github.com/MusheerRepo/JavaSelenium
+git clone https://github.com/MusheerRepo/JavaSelenium.git
 ```
 
 2. Navigate to the project directory:
@@ -74,8 +44,3 @@ mvn test
 ```
 open test-output/Extent_Report/Extent.html
 ```
-
-## 📬 Contact
-
-[LinkIn](https://in.linkedin.com/in/musheer-ahmad-khan-579953113)
-[Twitter](https://twitter.com/Musheer_AKhan)
