@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="My Test Suite" verbose="10" useDefaultListeners="true">
-  <test name="My Test" parallel="methods">
+  <test thread-count="10" name="My Test" parallel="methods">
     <!--To run all the test cases inside e2e folder -->
     <packages>
 			<package name="e2e.*"/>
