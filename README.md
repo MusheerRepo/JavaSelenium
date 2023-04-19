@@ -1,4 +1,4 @@
-# 🚀 Automated Testing Suite with Java, Selenium
+# 🤖 Automated Testing Suite with Java, Selenium
 
 This project is a comprehensive test suite designed to automate functional, regression testing.
 
