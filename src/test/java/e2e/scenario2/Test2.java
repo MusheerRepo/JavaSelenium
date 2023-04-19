@@ -7,16 +7,16 @@ import base.TestBase;
 
 public class Test2 extends TestBase {
     @Test(groups = "Scenario 2")
-    public void test1() {
+    public void test4() {
         Assert.assertTrue(2==2);
     }
 
     @Test(groups = "Scenario 2")
-    public void test2() {
+    public void test5() {
         Assert.assertTrue(2==2);
     }
     @Test(groups = "Scenario 2")
-    public void test3() {
+    public void test6() {
         Assert.assertTrue(2==2);
     }
 }

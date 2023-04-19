@@ -6,16 +6,16 @@ import base.TestBase;
 
 public class Test3 extends TestBase {
     @Test
-    public void test1() {
+    public void test7() {
         Assert.assertTrue(2==2);
     }
 
     @Test
-    public void test2() {
+    public void test8() {
         Assert.assertTrue(2==2);
     }
     @Test
-    public void test3() {
+    public void test9() {
         Assert.assertTrue(2==2);
     }
 }
