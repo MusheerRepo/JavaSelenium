@@ -15,7 +15,7 @@ To check the current path
 $/usr/libexec/java_home
 ```
 
-Set $JAVA_HOME
+Set $JAVA_HOME path
 ```
 To add path $nano ~/.zshrc
 Load update source file $source ~/.zshrc
