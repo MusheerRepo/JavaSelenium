@@ -17,8 +17,8 @@ $/usr/libexec/java_home
 
 Set $JAVA_HOME path
 ```
-To add path $nano ~/.zshrc
-Load update source file $source ~/.zshrc
+$nano ~/.zshrc
+$source ~/.zshrc
 ```
 
 ### Install Maven

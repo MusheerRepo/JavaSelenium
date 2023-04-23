@@ -1,1 +1,17 @@
 // This file is used in AWS CodeBuild
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+    commands:
+      - apt-get update
+      - apt-get install -y maven
+      - apt-get mvn clean install -Dmaven.skip.test
+  build:
+    commands:
+      - mvn test
+artifacts:
+  files:
+    - '**/*'
